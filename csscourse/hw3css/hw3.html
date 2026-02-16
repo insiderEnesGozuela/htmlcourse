@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .header a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #000;
+            font-size: 13px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -100px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 272px;
+            height: 92px;
+        }
+
+        .search-box {
+            width: 584px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 10px 15px;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        }
+
+        .search-wrapper:hover {
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            width: 480px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .voice-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #f8f9fa;
+            border: 1px solid #f2f2f2;
+            border-radius: 4px;
+            color: #5f6368;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            height: 36px;
+            padding: 0 16px;
+            cursor: pointer;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            width: 100%;
+        }
+
+        .footer-top {
+            padding: 15px 30px;
+            border-bottom: 1px solid #dadce0;
+            color: #70757a;
+            font-size: 15px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            list-style: none;
+        }
+
+        .footer-left li, .footer-right li {
+            margin-right: 27px;
+        }
+
+        .footer-left a, .footer-right a {
+            text-decoration: none;
+            color: #70757a;
+            font-size: 14px;
+        }
+
+        .footer-left a:hover, .footer-right a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">Gmail</a>
+        <a href="#">Görseller</a>
+        <img class="profile-pic" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%234285f4'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EE%3C/text%3E%3C/svg%3E" alt="Profile">
+    </div>
+
+    <div class="main">
+        <div class="logo">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 272 92'%3E%3Ctext x='10' y='60' font-family='Arial' font-size='70' font-weight='bold'%3E%3Ctspan fill='%234285F4'%3EG%3C/tspan%3E%3Ctspan fill='%23EA4335'%3Eo%3C/tspan%3E%3Ctspan fill='%23FBBC04'%3Eo%3C/tspan%3E%3Ctspan fill='%234285F4'%3Eg%3C/tspan%3E%3Ctspan fill='%2334A853'%3El%3C/tspan%3E%3Ctspan fill='%23EA4335'%3Ee%3C/tspan%3E%3C/text%3E%3C/svg%3E" alt="Google">
+        </div>
+
+        <div class="search-box">
+            <div class="search-wrapper">
+                <svg class="search-icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="#9aa0a6" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input type="text" class="search-input">
+                <svg class="voice-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path>
+                    <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                    <path fill="#fbbc05" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"></path>
+                    <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"></path>
+                </svg>
+            </div>
+
+            <div class="buttons">
+                <button class="btn">Google'da Ara</button>
+                <button class="btn">Kendimi Şanslı Hissediyorum</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-top">
+            Türkiye
+        </div>
+        <div class="footer-bottom">
+            <ul class="footer-left">
+                <li><a href="#">Hakkında</a></li>
+                <li><a href="#">Reklamcılık</a></li>
+                <li><a href="#">İşletme</a></li>
+                <li><a href="#">Arama nasıl çalışır?</a></li>
+            </ul>
+            <ul class="footer-right">
+                <li><a href="#">Gizlilik</a></li>
+                <li><a href="#">Şartlar</a></li>
+                <li><a href="#">Ayarlar</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
