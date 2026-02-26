@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f3c0;
+    background-image: radial-gradient(circle, #ccc97a 1px, transparent 1px);
+    background-size: 18px 18px;
+    font-family: Georgia, serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #e87722;
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 8px 22px;
+    border: 2px solid #444;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+}
+
+.btn:hover,
+.btn.active {
+    background-color: #444;
+    color: white;
+}
+
+#menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 80px;
+}
+
+.menu-item {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.menu-info {
+    flex: 1;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-header h3 {
+    color: #8b1a1a;
+    font-size: 1.15rem;
+}
+
+.menu-header span {
+    color: #8b1a1a;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.menu-info hr {
+    border: none;
+    border-top: 1.5px solid #8b1a1a;
+    margin-bottom: 12px;
+}
+
+.menu-info p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
